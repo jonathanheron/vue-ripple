@@ -2,7 +2,7 @@
 
 div(
   v-bind:class="'Ripple ' + ( animate ? 'is-reppling' : '' )"
-  v-bind:style="{ top: top + 'px', left: left + 'px', width: width + 'px', height: height + 'px'}" )
+  v-bind:style="{ top: top + 'px', left: left + 'px', width: width + 'px', height: height + 'px', backgroundColor: color}" )
 
 </template>
 
@@ -30,6 +30,10 @@ div(
           left: 0
         },
         required: true
+      },
+      color: {
+        type: String,
+        default: 'rgba(255,0,0,0.5)' // Default to red to make it obvious when a color isn't being specified
       }
     },
 
