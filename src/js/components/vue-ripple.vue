@@ -86,6 +86,8 @@ div(
         this.height = rippleWidthShouldBe
         this.top = cursorPos.top - buttonPos.top - centerize
         this.left = cursorPos.left - buttonPos.left - centerize
+        var self = this
+        setTimeout(function () { self.animate = false } , 500) // Same duration as the CSS animation
       }
     }
 
